@@ -8,3 +8,13 @@ C:\Users\Michalis\source\repos\AutoLectureRecorder\AutoLectureRecorder\obj\Debug
 C:\Users\Michalis\source\repos\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.csproj.CoreCompileInputs.cache
 C:\Users\Michalis\source\repos\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.exe
 C:\Users\Michalis\source\repos\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.pdb
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\bin\Debug\AutoLectureRecorder.exe.config
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\bin\Debug\AutoLectureRecorder.exe
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\bin\Debug\AutoLectureRecorder.pdb
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.csprojAssemblyReference.cache
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.MainForm.resources
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.Properties.Resources.resources
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.csproj.GenerateResource.cache
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.csproj.CoreCompileInputs.cache
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.exe
+C:\Users\kkalo\OneDrive\Documents\GitHub\AutoLectureRecorder\AutoLectureRecorder\obj\Debug\AutoLectureRecorder.pdb
