@@ -54,7 +54,7 @@
             <Button x:Name="MenuYoutube" Grid.Row="3"/>
             <Button x:Name="MenuSettings" Grid.Row="4"/>
         </Grid>
-
+        
         <!--TitleBar-->
         <Grid Grid.Column="1" Background="#232742">
             <Grid.RowDefinitions>
@@ -70,16 +70,19 @@
             </Grid.ColumnDefinitions>
 
             <Grid.Resources>
+                <Image x:Key="ExitImage" Source="/x_24px.png"/>
+                <Image x:Key="ResizeImage" Source="/maximize_button_16px.png"/>
+                <Image x:Key="MinimizeImage" Source="/minus_20px.png"/>
+
                 <Style TargetType="Button">
-                        
+                    <Setter Property="Background" Value="#333856"/>
+                    <Setter Property="BorderThickness" Value="0"/>
                 </Style>
             </Grid.Resources>
 
-            <Button x:Name="ButtonExit" Grid.Column="3">
-                
-            </Button>
-            <Button x:Name="ButtonResize" Grid.Column="2"/>
-            <Button x:Name="ButtonWindowState" Grid.Column="1"/>
+            <Button Content="{StaticResource ExitImage}" x:Name="ButtonExit" Click="ExitBtn_Click" Grid.Column="3"/>
+            <Button  Content="{StaticResource ResizeImage}" x:Name="ButtonResize" Grid.Column="2"/>
+            <Button  Content="{StaticResource MinimizeImage}" x:Name="ButtonWindowState" Grid.Column="1"/>
         </Grid>
         
         

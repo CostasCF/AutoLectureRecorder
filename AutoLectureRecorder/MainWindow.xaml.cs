@@ -32,5 +32,11 @@ namespace AutoLectureRecorder
             Brush pressedBrush = (SolidColorBrush)new BrushConverter().ConvertFrom("#454D73");
             button.Background = button.Background.Equals(initialBrush) ? pressedBrush : initialBrush;
         }
+
+        void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Close this window
+            MessageBox.Show("I do Someting");
+        }
     }
 }

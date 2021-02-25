@@ -6,4 +6,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="maximize_button_16px.png" />
+    <None Remove="maximize_button_24px.png" />
+    <None Remove="minus_20px.png" />
+    <None Remove="x_24px.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="maximize_button_16px.png" />
+    <Resource Include="maximize_button_24px.png" />
+    <Resource Include="minus_20px.png" />
+    <Resource Include="x_24px.png" />
+  </ItemGroup>
+
 </Project>
