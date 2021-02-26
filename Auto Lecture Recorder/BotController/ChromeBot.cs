@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Auto_Lecture_Recorder.BotController
     partial class ChromeBot
     {
         const int waitTime = 30; //seconds     
+
+        IWebDriver driver;
 
         //Settings
         public bool HideBrowser = false;

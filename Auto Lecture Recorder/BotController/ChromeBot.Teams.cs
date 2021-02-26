@@ -15,9 +15,7 @@ using OpenQA.Selenium.Interactions;
 namespace Auto_Lecture_Recorder.BotController
 {
     partial class ChromeBot
-    {
-        IWebDriver driver;
-
+    { 
         public void GoToTeamsMenu() => driver.Url = "https://teams.microsoft.com/_#/school//?ctx=teamsGrid";       
         public void ConnectToTeams(string AM, string password)
         {

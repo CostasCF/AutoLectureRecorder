@@ -126,7 +126,6 @@
   <ItemGroup>
     <Compile Include="BotController\ChromeBot.cs" />
     <Compile Include="BotController\ChromeBot.Teams.cs" />
-    <Compile Include="BotController\ChromeBot.Webex.cs" />
     <Compile Include="DropdownList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="ModernTextbox.resx">
       <DependentUpon>ModernTextbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
