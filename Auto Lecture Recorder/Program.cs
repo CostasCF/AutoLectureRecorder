@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Auto_Lecture_Recorder.BotController;
 
 namespace Auto_Lecture_Recorder
 {
@@ -16,7 +17,9 @@ namespace Auto_Lecture_Recorder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new TestForm());
+
+            ChromeBot bot = new ChromeBot();
         }
     }
 }
