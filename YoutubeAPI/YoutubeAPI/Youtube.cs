@@ -74,15 +74,16 @@ namespace YoutubeAPI
                 // Define and execute the API request
                 var request = youtubeService.Playlists.List("snippet,contentDetails");
                 PlaylistListResponse response = new PlaylistListResponse();
-
                 request.MaxResults = 25;
-                request.Mine = true;
-                response = await request.ExecuteAsync();
+                request.Mine = true; //mine is true means that we are refering to our own channel
+                response = await request.ExecuteAsync(); //await response
 
                 Console.WriteLine(response.Items.Count);
+
                 foreach (var playlist in response.Items)
                 {
-                    Console.WriteLine("{0} ({1})", playlist.Snippet.Title, playlist.Id);
+                    MessageBox.Show(playlist.Snippet.Title);
+                    Console.WriteLine(playlist.Id);
                 }
             }
             else { MessageBox.Show("Failed to Authenticate"); }
