@@ -34,6 +34,8 @@ namespace YoutubeAPI
             this.browserBtn = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.authenticateBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uploadBtn
@@ -89,11 +91,34 @@ namespace YoutubeAPI
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // authenticateBtn
+            // 
+            this.authenticateBtn.Location = new System.Drawing.Point(281, 46);
+            this.authenticateBtn.Name = "authenticateBtn";
+            this.authenticateBtn.Size = new System.Drawing.Size(75, 23);
+            this.authenticateBtn.TabIndex = 5;
+            this.authenticateBtn.Text = "Authenticate Youtube";
+            this.authenticateBtn.UseVisualStyleBackColor = true;
+            this.authenticateBtn.Click += new System.EventHandler(this.authenticateBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(278, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.authenticateBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.browserBtn);
@@ -113,6 +138,8 @@ namespace YoutubeAPI
         private System.Windows.Forms.Button browserBtn;
         private System.Windows.Forms.Label txtPath;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button authenticateBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
