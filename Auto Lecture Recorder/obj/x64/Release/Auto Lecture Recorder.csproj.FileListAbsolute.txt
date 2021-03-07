@@ -1,0 +1,37 @@
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.csprojAssemblyReference.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.DropdownList.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.MainForm.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.ModernCheckbox.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.Properties.Resources.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.ModernTextBox.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto_Lecture_Recorder.TestForm.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.csproj.GenerateResource.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.csproj.CoreCompileInputs.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Auto Lecture Recorder.exe.config
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Auto Lecture Recorder.exe
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Auto Lecture Recorder.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Auth.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Auth.PlatformServices.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Core.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.PlatformServices.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.YouTube.v3.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Newtonsoft.Json.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\ScreenRecorderLib.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\WebDriver.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\WebDriver.Support.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Auth.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Auth.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Core.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.Core.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.YouTube.v3.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Google.Apis.YouTube.v3.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\Newtonsoft.Json.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\WebDriver.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\WebDriver.Support.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Release\ScreenRecorderLib.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.csproj.CopyComplete
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.exe
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Release\Auto Lecture Recorder.pdb

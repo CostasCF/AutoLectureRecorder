@@ -17,10 +17,7 @@ namespace Auto_Lecture_Recorder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
-
-            ChromeBot bot = new ChromeBot();
-            bot.
+            Application.Run(new TestForm());           
         }
     }
 }

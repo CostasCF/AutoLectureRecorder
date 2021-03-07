@@ -74,17 +74,6 @@ namespace Auto_Lecture_Recorder
             teamsBot.HideBrowser = true;
             teamsBot.StartDriver();
 
-            if (teamsBot.AuthenticateUser(RN, password))
-            {
-                LoginResult result = OnLoginSuccess;
-                panelAuthentication.Invoke(result);
-            }
-            else
-            {
-                LoginResult result = OnLoginFailure;
-                panelAuthentication.Invoke(result);
-            }
-
             teamsBot.HideBrowser = false;
             teamsBot.TerminateDriver();
 

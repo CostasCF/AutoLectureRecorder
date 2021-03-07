@@ -11,7 +11,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 using Auto_Lecture_Recorder.Lectures;
-using Auto_Lecture_Recorder.BotController.Unipi;
+using Auto_Lecture_Recorder.BotController;
 using Auto_Lecture_Recorder.ScreenRecorder;
 using Auto_Lecture_Recorder.Youtube;
 using System.IO;
@@ -399,30 +399,7 @@ namespace Auto_Lecture_Recorder
             timerIntervalSeconds = new TimeSpan(0, 0, timerEndtime.Interval / 1000);
 
             TimerMethods initiateTimers = new TimerMethods(timerEndtime.Start);
-            panelRecord.Invoke(initiateTimers);
-
-            teamsBot.StartDriver();
-            // Join meating
-            if (teamsBot.ConnectToTeams(RN, password))
-            {
-                if (teamsBot.ConnectToTeamsMeeting(nextScheduledLecture.Name))
-                {
-                    // Record
-                    recorder.StartRecording(nextScheduledLecture.Name);
-                }
-                else
-                {
-                    teamsBot.TerminateDriver();
-                    Console.WriteLine("Unable to connect to teams");
-                }
-            }
-            else
-            {
-                panelMainWindows.Invoke(showAndUpdate, panelRecord);
-                Console.WriteLine("Wrong Credentials");
-            }
-
-            
+            panelRecord.Invoke(initiateTimers);           
         }
 
         private void ShowAndUpdatePanel(Panel panel)

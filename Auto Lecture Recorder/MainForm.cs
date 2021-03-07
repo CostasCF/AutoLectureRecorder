@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
-using Auto_Lecture_Recorder.BotController.Unipi;
+using Auto_Lecture_Recorder.BotController;
 using Auto_Lecture_Recorder.Lectures;
 using Auto_Lecture_Recorder.ScreenRecorder;
 using Auto_Lecture_Recorder.Youtube;
