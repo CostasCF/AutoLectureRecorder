@@ -78,7 +78,7 @@ namespace Auto_Lecture_Recorder.BotController
             {
                 string[] tempList = { tempCookie.Name, tempCookie.Value, tempCookie.Domain, tempCookie.Expiry.ToString() };
                 cookiesList.Add(tempList);
-                Console.WriteLine(tempCookie.Expiry);
+                Console.WriteLine(tempCookie.Name + ", " + tempCookie.Expiry);
             }
         }
 

@@ -70,3 +70,41 @@ C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.exe
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.pdb
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.csprojAssemblyReference.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Auto Lecture Recorder.exe.config
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Auto Lecture Recorder.exe
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Auto Lecture Recorder.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Auth.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Auth.PlatformServices.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Core.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.PlatformServices.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.YouTube.v3.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Newtonsoft.Json.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\ScreenRecorderLib.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\WebDriver.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\WebDriver.Support.dll
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Auth.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Auth.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Core.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.Core.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.YouTube.v3.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Google.Apis.YouTube.v3.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\Newtonsoft.Json.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\WebDriver.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\WebDriver.Support.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\ScreenRecorderLib.xml
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.csprojAssemblyReference.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.DropdownList.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.MainForm.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.ModernCheckbox.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.Properties.Resources.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.ModernTextBox.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.TestForm.resources
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.csproj.GenerateResource.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.csproj.CoreCompileInputs.cache
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.csproj.CopyComplete
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.exe
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\SeleniumExtras.WaitHelpers.dll

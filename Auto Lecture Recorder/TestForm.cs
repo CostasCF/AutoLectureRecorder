@@ -32,7 +32,7 @@ namespace Auto_Lecture_Recorder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChromeBot bot = new ChromeBot();           
+            bot = new ChromeBot();           
 
             bool isValid = false;
             if (!String.IsNullOrEmpty(textBox1.Text) || !String.IsNullOrEmpty(textBox2.Text))
@@ -76,12 +76,17 @@ namespace Auto_Lecture_Recorder
         {
             StringBuilder sb = new StringBuilder();
 
-            List<string> x = bot.GetMeetings();
-            foreach (string s in x)
+            List<string> meetingsList = bot.GetMeetings();
+            foreach (string s in meetingsList)
             {
                 sb.AppendLine(s);
             }
             richTextBox1.Text = sb.ToString();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            bot.GoToTeamsMenu();
         }
     }
 }

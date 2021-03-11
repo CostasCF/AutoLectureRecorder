@@ -30,6 +30,7 @@ namespace Auto_Lecture_Recorder
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@ namespace Auto_Lecture_Recorder
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox3);
@@ -61,8 +63,18 @@ namespace Auto_Lecture_Recorder
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(402, 77);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 383);
+            this.panel1.Size = new System.Drawing.Size(262, 431);
             this.panel1.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(0, 387);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(262, 44);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Open Teams Menu";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button4
             // 
@@ -238,5 +250,6 @@ namespace Auto_Lecture_Recorder
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button6;
     }
 }
