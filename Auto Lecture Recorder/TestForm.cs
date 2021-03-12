@@ -40,7 +40,7 @@ namespace Auto_Lecture_Recorder
                 label_AuthIndicator.Text = "Authenticating...";
                 label_AuthIndicator.ForeColor = Color.Gray;
 
-                bot.AuthenticateUser(textBox1.Text, textBox2.Text);
+                isValid = bot.AuthenticateUser(textBox1.Text, textBox2.Text);
             }               
             else
             {
@@ -68,8 +68,12 @@ namespace Auto_Lecture_Recorder
                 MessageBox.Show("Invalid metting link");
                 return;
             }
-           
-            bot.ConnectToMeetingByName(textBox3.Text);
+
+            bool onMeeting = bot.ConnectToMeetingByName(textBox3.Text);
+            if(onMeeting)
+            {
+
+            }
         }
 
         private void button3_Click_1(object sender, EventArgs e)

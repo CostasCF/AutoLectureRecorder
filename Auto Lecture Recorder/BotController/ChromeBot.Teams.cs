@@ -21,7 +21,24 @@ namespace Auto_Lecture_Recorder.BotController
         public string teamsHomePagetUrl = "https://teams.microsoft.com/_#/school//?ctx=teamsGrid";
         public bool onMeeting = false;
 
-        public void AuthenticateUser(string AM, string password)
+        public void GoToTeamsMenu()
+        {
+            if (driver == null || !isDriverRunning)
+            {
+                StartDriver();
+                LoadCookies(null, cookieFileName);
+                Thread.Sleep(3000);
+            }
+            else
+            {
+                if (!driver.Url.Equals(teamsHomePagetUrl))
+                {
+                    driver.Url = teamsHomePagetUrl;
+                }
+            }
+        }
+
+        public bool AuthenticateUser(string AM, string password)
         {
             try
             {
@@ -71,20 +88,17 @@ namespace Auto_Lecture_Recorder.BotController
                 SaveCookiesToFile(cookiesList);
 
                 TerminateDriver();
+
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An error occured while authenticating user: " + ex.Message);
+                return false;
             }
         }
 
-        public void GoToTeamsMenu()
-        {
-            StartDriver();
-            LoadCookies(null, cookieFileName);
-        }
-
-        public void ConnectToMeetingByName(string name)
+        public bool ConnectToMeetingByName(string name)
         {
             try
             {
@@ -120,12 +134,13 @@ namespace Auto_Lecture_Recorder.BotController
                 preJoinCallBtn.Click();
 
                 onMeeting = true;
+                return true;
             }   
             catch (Exception ex)
             {            
                 TerminateDriver();
                 Console.WriteLine("An error occured while connecting to meeting: " + ex.Message);
-                throw ex;
+                return false;
             }
         }
 
@@ -156,6 +171,7 @@ namespace Auto_Lecture_Recorder.BotController
         public int GetParticipantsNumber()
         {
             if (!onMeeting) return 0;
+
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
             int participants = 0;
             IWebElement showParticipantsBtn = driver.FindElement(By.Id("roster-button"));
