@@ -108,3 +108,5 @@ D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture R
 D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.exe
 D:\Github\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto Lecture Recorder.pdb
 D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\bin\x86\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x86\Debug\Auto_Lecture_Recorder.TestForm.resources

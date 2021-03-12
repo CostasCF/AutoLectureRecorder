@@ -69,7 +69,8 @@ namespace Auto_Lecture_Recorder
                 return;
             }
 
-            bool onMeeting = bot.ConnectToMeetingByName(textBox3.Text);           
+            bot.HideBrowser = false;
+            bool onMeeting = bot.ConnectToMeetingByName(textBox3.Text);
         }
 
         private void button3_Click_1(object sender, EventArgs e)
