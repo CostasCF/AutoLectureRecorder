@@ -29,89 +29,40 @@ namespace Auto_Lecture_Recorder
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panel_Login = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Login = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label_AuthIndicator = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button_GetPartsNum = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.panel_Meeting = new System.Windows.Forms.Panel();
+            this.button_LeaveMeeting = new System.Windows.Forms.Button();
+            this.button_connToMeeting = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel_General = new System.Windows.Forms.Panel();
+            this.button_GetMeetings = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel_Login.SuspendLayout();
+            this.panel_Meeting.SuspendLayout();
+            this.panel_General.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel_Login
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(402, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 431);
-            this.panel1.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(0, 387);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(262, 44);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Open Teams Menu";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 338);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(262, 44);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Leave meeting";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label3.Location = new System.Drawing.Point(63, 220);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Meeting\'s Link";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox3.Location = new System.Drawing.Point(0, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 23);
-            this.textBox3.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(0, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(262, 44);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Connect to meeting";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel_Login.Controls.Add(this.label1);
+            this.panel_Login.Controls.Add(this.button_Login);
+            this.panel_Login.Controls.Add(this.textBox2);
+            this.panel_Login.Controls.Add(this.label2);
+            this.panel_Login.Controls.Add(this.textBox1);
+            this.panel_Login.Location = new System.Drawing.Point(406, 199);
+            this.panel_Login.Name = "panel_Login";
+            this.panel_Login.Size = new System.Drawing.Size(262, 193);
+            this.panel_Login.TabIndex = 5;
             // 
             // label1
             // 
@@ -123,15 +74,15 @@ namespace Auto_Lecture_Recorder
             this.label1.TabIndex = 0;
             this.label1.Text = "Password";
             // 
-            // button1
+            // button_Login
             // 
-            this.button1.Location = new System.Drawing.Point(0, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Login.Location = new System.Drawing.Point(0, 142);
+            this.button_Login.Name = "button_Login";
+            this.button_Login.Size = new System.Drawing.Size(262, 44);
+            this.button_Login.TabIndex = 3;
+            this.button_Login.Text = "Login";
+            this.button_Login.UseVisualStyleBackColor = true;
+            this.button_Login.Click += new System.EventHandler(this.button_Login_Click);
             // 
             // textBox2
             // 
@@ -160,6 +111,14 @@ namespace Auto_Lecture_Recorder
             this.textBox1.Size = new System.Drawing.Size(262, 23);
             this.textBox1.TabIndex = 1;
             // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox3.Location = new System.Drawing.Point(0, 41);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(262, 23);
+            this.textBox3.TabIndex = 6;
+            // 
             // label_AuthIndicator
             // 
             this.label_AuthIndicator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -172,62 +131,117 @@ namespace Auto_Lecture_Recorder
             this.label_AuthIndicator.TabIndex = 0;
             this.label_AuthIndicator.Text = "Not Authenticated ";
             // 
-            // richTextBox1
+            // button_GetPartsNum
             // 
-            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.richTextBox1.Location = new System.Drawing.Point(23, 77);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(233, 332);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(23, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 34);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Get Meetings";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(23, 492);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(233, 34);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Get Participants Number";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_GetPartsNum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_GetPartsNum.Location = new System.Drawing.Point(0, 331);
+            this.button_GetPartsNum.Name = "button_GetPartsNum";
+            this.button_GetPartsNum.Size = new System.Drawing.Size(233, 34);
+            this.button_GetPartsNum.TabIndex = 9;
+            this.button_GetPartsNum.Text = "Get Participants Number";
+            this.button_GetPartsNum.UseVisualStyleBackColor = true;
+            this.button_GetPartsNum.Click += new System.EventHandler(this.button_GetPartsNum_Click);
             // 
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox4.Location = new System.Drawing.Point(113, 463);
+            this.textBox4.Location = new System.Drawing.Point(93, 302);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(47, 23);
             this.textBox4.TabIndex = 11;
+            // 
+            // panel_Meeting
+            // 
+            this.panel_Meeting.Controls.Add(this.button_LeaveMeeting);
+            this.panel_Meeting.Controls.Add(this.button_connToMeeting);
+            this.panel_Meeting.Controls.Add(this.label3);
+            this.panel_Meeting.Controls.Add(this.textBox3);
+            this.panel_Meeting.Location = new System.Drawing.Point(406, 199);
+            this.panel_Meeting.Name = "panel_Meeting";
+            this.panel_Meeting.Size = new System.Drawing.Size(262, 166);
+            this.panel_Meeting.TabIndex = 12;
+            // 
+            // button_LeaveMeeting
+            // 
+            this.button_LeaveMeeting.Location = new System.Drawing.Point(0, 120);
+            this.button_LeaveMeeting.Name = "button_LeaveMeeting";
+            this.button_LeaveMeeting.Size = new System.Drawing.Size(262, 44);
+            this.button_LeaveMeeting.TabIndex = 10;
+            this.button_LeaveMeeting.Text = "Leave meeting";
+            this.button_LeaveMeeting.UseVisualStyleBackColor = true;
+            this.button_LeaveMeeting.Click += new System.EventHandler(this.button_LeaveMeeting_Click);
+            // 
+            // button_connToMeeting
+            // 
+            this.button_connToMeeting.Location = new System.Drawing.Point(0, 70);
+            this.button_connToMeeting.Name = "button_connToMeeting";
+            this.button_connToMeeting.Size = new System.Drawing.Size(262, 44);
+            this.button_connToMeeting.TabIndex = 9;
+            this.button_connToMeeting.Text = "Connect to meeting";
+            this.button_connToMeeting.UseVisualStyleBackColor = true;
+            this.button_connToMeeting.Click += new System.EventHandler(this.button_connToMeeting_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label3.Location = new System.Drawing.Point(63, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Meeting\'s Link";
+            // 
+            // panel_General
+            // 
+            this.panel_General.Controls.Add(this.button_GetMeetings);
+            this.panel_General.Controls.Add(this.richTextBox1);
+            this.panel_General.Controls.Add(this.button_GetPartsNum);
+            this.panel_General.Controls.Add(this.textBox4);
+            this.panel_General.Location = new System.Drawing.Point(67, 79);
+            this.panel_General.Name = "panel_General";
+            this.panel_General.Size = new System.Drawing.Size(233, 384);
+            this.panel_General.TabIndex = 13;
+            // 
+            // button_GetMeetings
+            // 
+            this.button_GetMeetings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_GetMeetings.Location = new System.Drawing.Point(0, 253);
+            this.button_GetMeetings.Name = "button_GetMeetings";
+            this.button_GetMeetings.Size = new System.Drawing.Size(233, 34);
+            this.button_GetMeetings.TabIndex = 9;
+            this.button_GetMeetings.Text = "Get Meetings";
+            this.button_GetMeetings.UseVisualStyleBackColor = true;
+            this.button_GetMeetings.Click += new System.EventHandler(this.button_GetMeetings_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(233, 247);
+            this.richTextBox1.TabIndex = 7;
+            this.richTextBox1.Text = "";
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 592);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.panel_General);
+            this.Controls.Add(this.panel_Meeting);
             this.Controls.Add(this.label_AuthIndicator);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Login);
             this.Name = "TestForm";
             this.Text = "TestForm";
             this.Load += new System.EventHandler(this.TestForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_Login.ResumeLayout(false);
+            this.panel_Login.PerformLayout();
+            this.panel_Meeting.ResumeLayout(false);
+            this.panel_Meeting.PerformLayout();
+            this.panel_General.ResumeLayout(false);
+            this.panel_General.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,21 +249,22 @@ namespace Auto_Lecture_Recorder
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Login;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_AuthIndicator;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_GetPartsNum;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel_Meeting;
+        private System.Windows.Forms.Button button_LeaveMeeting;
+        private System.Windows.Forms.Button button_connToMeeting;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel_General;
+        private System.Windows.Forms.Button button_GetMeetings;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

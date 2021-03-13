@@ -80,7 +80,7 @@ namespace Auto_Lecture_Recorder.BotController
                 cookiesList.Add(tempList);
                 Console.WriteLine(tempCookie.Name + ", " + tempCookie.Expiry);
             }
-        }
+        }      
 
         private void SaveCookiesToFile(List<string[]> cookiesList)      
         {           
@@ -104,7 +104,7 @@ namespace Auto_Lecture_Recorder.BotController
         private void LoadCookies(string url, string filename)
         {
             if (driver == null || !isDriverRunning) return;
-            if (!File.Exists(cookieFileName)) return;
+            if (!File.Exists(filename)) return;
 
             try
             {
@@ -126,6 +126,7 @@ namespace Auto_Lecture_Recorder.BotController
                 {
                     cookie = new Cookie(tmpCkInfo[0], tmpCkInfo[1]);
                     driver.Manage().Cookies.AddCookie(cookie);
+                    Console.WriteLine(cookie.Name);
                 }
 
                 RefreshCurrentPage();

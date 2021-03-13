@@ -11,6 +11,9 @@ using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Auto_Lecture_Recorder.BotController
 {
@@ -39,7 +42,7 @@ namespace Auto_Lecture_Recorder.BotController
         }
 
         public bool AuthenticateUser(string AM, string password)
-        {
+        {            
             try
             {
                 HideBrowser = true;
@@ -98,8 +101,44 @@ namespace Auto_Lecture_Recorder.BotController
             }
         }
 
-        public bool ConnectToMeetingByName(string name)
+        public bool IsCookieExpired(string cookieName)
         {
+            if (!File.Exists(cookieFileName)) return true;
+
+            //Get Cookies from file
+            try
+            {               
+                Stream stream = new FileStream(cookieFileName, FileMode.Open);
+                IFormatter formatter = new BinaryFormatter();
+                List<string[]> cookiesList = (List<string[]>)formatter.Deserialize(stream);
+                stream.Close();
+
+                //Search for cookie TSPREAUTHCOOKIE
+                foreach (string[] cookie in cookiesList)
+                {
+                    if (cookie[0].Equals(cookieName))
+                    {
+                        //Compare times
+                        DateTime currentTime = DateTime.Now;
+                        Console.WriteLine(currentTime.ToString());
+                        DateTime cookieExpiry = DateTime.Parse(cookie[3]);
+                        Console.WriteLine(cookieExpiry.ToString());
+                        int x = TimeSpan.Compare(currentTime.TimeOfDay, cookieExpiry.TimeOfDay);
+                        //Check if current date is longer than expiry date
+                        if (x == -1) return false;
+                        else return true;
+                    }
+                }
+                return true;
+            }
+            catch
+            {
+                return true;
+            }           
+        }
+
+        public bool ConnectToMeetingByName(string name)
+        {            
             try
             {
                 if (driver == null || !isDriverRunning)
@@ -144,7 +183,7 @@ namespace Auto_Lecture_Recorder.BotController
             }
         }
 
-        private void LeaveMeeting()
+        public void LeaveMeeting()
         {
             if (!onMeeting) return;
 
@@ -205,6 +244,7 @@ namespace Auto_Lecture_Recorder.BotController
             {
                 if (driver == null || !isDriverRunning)
                 {
+                    HideBrowser = true;
                     StartDriver();
                     LoadCookies(null, cookieFileName);
                     Thread.Sleep(3000);
@@ -217,8 +257,8 @@ namespace Auto_Lecture_Recorder.BotController
                 
                 List<string> meetingsList = new List<string>();
                 //Find cards container
-                Thread.Sleep(5000);
-                IWebElement cardsContainer = driver.FindElement(By.XPath("//*[@id='favorite-teams-panel']"));
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));               
+                IWebElement cardsContainer = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@id='favorite-teams-panel']")));
                 //Retrieve number of cards
                 int cardsNum = int.Parse(cardsContainer.GetAttribute("set-size"));
                 Console.WriteLine("Number of cards: " + cardsNum);
@@ -228,7 +268,7 @@ namespace Auto_Lecture_Recorder.BotController
                 foreach (var card in cardsList)
                     meetingsList.Add(card.Text);
 
-                TerminateDriver();
+                TerminateDriver(); 
 
                 return meetingsList;
             }

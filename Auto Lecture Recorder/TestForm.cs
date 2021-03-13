@@ -22,72 +22,110 @@ namespace Auto_Lecture_Recorder
         }
         private void TestForm_Load(object sender, EventArgs e)
         {
-            label_AuthIndicator.Text = "Not Authenticated";
-            label_AuthIndicator.ForeColor = Color.Red;
+            button_LeaveMeeting.Enabled = false;
+            button_GetPartsNum.Enabled = false;
 
-            bot = new ChromeBot();
+            bot = new ChromeBot();            
 
-            //button2.Enabled = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            bot = new ChromeBot();           
-
-            bool isValid = false;
-            if (!String.IsNullOrEmpty(textBox1.Text) || !String.IsNullOrEmpty(textBox2.Text))
+            if (bot.IsCookieExpired("TSPREAUTHCOOKIE"))
             {
-                label_AuthIndicator.Text = "Authenticating...";
-                label_AuthIndicator.ForeColor = Color.Gray;
+                label_AuthIndicator.Text = "Not Authenticated";
+                label_AuthIndicator.ForeColor = Color.Red;
 
-                isValid = bot.AuthenticateUser(textBox1.Text, textBox2.Text);
-            }               
+                panel_Meeting.Visible = false;
+                panel_General.Visible = false;
+                panel_Login.Visible = true;
+                
+            }
             else
             {
-                MessageBox.Show("Invalid Credentials");
+                label_AuthIndicator.Text = "User Authenticated";
+                label_AuthIndicator.ForeColor = Color.Green;
+
+                panel_Login.Visible = false;
+                panel_Meeting.Visible = true;
+                panel_General.Visible = true;
+                
             }
-                  
+        }
+
+        private void button_Login_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("Invalid Credentials");
+                return;
+            }
+
+            bool isValid = bot.AuthenticateUser(textBox1.Text, textBox2.Text);
             if(isValid)
             {
                 label_AuthIndicator.Text = "User Authenticated";
                 label_AuthIndicator.ForeColor = Color.Green;
 
-                button2.Enabled = true;
+                panel_Login.Visible = false;
+                panel_Meeting.Visible = true;
+                panel_General.Visible = true;
             }
             else
             {
                 label_AuthIndicator.Text = "Not Authenticated";
                 label_AuthIndicator.ForeColor = Color.Red;
             }
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_connToMeeting_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBox3.Text))
             {
-                MessageBox.Show("Invalid metting link");
+                MessageBox.Show("Invalid meeting name");
                 return;
             }
 
-            bot.HideBrowser = false;
-            bool onMeeting = bot.ConnectToMeetingByName(textBox3.Text);
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            List<string> meetingsList = bot.GetMeetings();
-            foreach (string s in meetingsList)
+            bool inMeeting = bot.ConnectToMeetingByName(textBox3.Text);
+            if(inMeeting)
             {
-                sb.AppendLine(s);
-            }
-            richTextBox1.Text = sb.ToString();
+                button_connToMeeting.Enabled = true;
+                button_GetPartsNum.Enabled = true;
+            }           
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button_LeaveMeeting_Click(object sender, EventArgs e)
         {
-            bot.GoToTeamsMenu();
+            bot.LeaveMeeting();
+
+            button_LeaveMeeting.Enabled = false;
+            button_GetPartsNum.Enabled = false;
+        }
+
+        private void button_GetPartsNum_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = bot.GetParticipantsNumber().ToString();
+        }
+
+        private void button_GetMeetings_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                List<string> meetingsList = bot.GetMeetings();
+                if(meetingsList == null)
+                {
+                    MessageBox.Show("Getting meetings failed");
+                    return;
+                }
+                foreach (string s in meetingsList)
+                {
+                    sb.AppendLine(s);
+                }
+                richTextBox1.Text = sb.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Getting meetings failed");
+            }
+           
         }
     }
 }

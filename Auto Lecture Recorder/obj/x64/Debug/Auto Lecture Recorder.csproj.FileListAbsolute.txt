@@ -91,3 +91,4 @@ C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Debug\Auto Lecture Recorder.csproj.CopyComplete
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Debug\Auto Lecture Recorder.exe
 C:\Users\Michalis\Documents\GitHub\AutoLectureRecorder\Auto Lecture Recorder\obj\x64\Debug\Auto Lecture Recorder.pdb
+D:\Github\AutoLectureRecorder\Auto Lecture Recorder\bin\x64\Debug\SeleniumExtras.WaitHelpers.dll
