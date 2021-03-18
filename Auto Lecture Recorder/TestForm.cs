@@ -83,12 +83,8 @@ namespace Auto_Lecture_Recorder
                 return;
             }
 
-            bool inMeeting = bot.ConnectToMeetingByName(textBox3.Text);
-            if(inMeeting)
-            {
-                button_connToMeeting.Enabled = true;
-                button_GetPartsNum.Enabled = true;
-            }           
+            bot.ConnectToMeetingByName(textBox3.Text);
+                       
         }
 
         private void button_LeaveMeeting_Click(object sender, EventArgs e)
