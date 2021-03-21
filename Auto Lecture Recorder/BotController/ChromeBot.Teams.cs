@@ -136,39 +136,34 @@ namespace Auto_Lecture_Recorder.BotController
         }
 
         public bool ConnectToMeetingByName(string name)
-        {           
-            if (driver != null || isDriverRunning) TerminateDriver();
-
-            StartDriver();
-            LoadCookies(null, cookieFileName);
-            Thread.Sleep(3000);
-            onMeeting = false;
-
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
-            //Clicking to specific team
-            IWebElement lessonCardBtn = driver.FindElement(By.XPath("//div[contains(@data-tid, '" + name + "')]"));           
-            lessonCardBtn.Click();
-
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
-            //Wait 20 minutes until Join button appears
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20 * 60));            
-            IWebElement joinBtn = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//button[contains(@data-tid, 'join-btn')]")));
-            joinBtn.Click();
-
-            IWebElement noAudioMicBtn = driver.FindElement(By.XPath("//button[contains(@track-summary, 'Continue in call/meetup without device access')]"));
-            noAudioMicBtn.Click();
-
-            IWebElement preJoinCallBtn = driver.FindElement(By.XPath("//button[contains(@data-tid, 'prejoin-join-button')]"));
-            preJoinCallBtn.Click();
-
-            onMeeting = true;            
-            return true;
-
+        {                      
             try
             {
-                
+                if (driver != null || isDriverRunning) TerminateDriver();
+
+                StartDriver();
+                LoadCookies(null, cookieFileName);
+                Thread.Sleep(3000);
+                onMeeting = false;
+
+                Thread.Sleep(5000);
+                //Clicking to specific team
+                IWebElement lessonCardBtn = driver.FindElement(By.XPath("//div[contains(@data-tid, '" + name + "')]"));
+                lessonCardBtn.Click();
+
+                //Wait 20 minutes until Join button appears
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20 * 60));
+                IWebElement joinBtn = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//button[contains(@data-tid, 'join-btn')]")));
+                joinBtn.Click();
+
+                IWebElement noAudioMicBtn = driver.FindElement(By.XPath("//button[contains(@track-summary, 'Continue in call/meetup without device access')]"));
+                noAudioMicBtn.Click();
+
+                IWebElement preJoinCallBtn = driver.FindElement(By.XPath("//button[contains(@data-tid, 'prejoin-join-button')]"));
+                preJoinCallBtn.Click();
+
+                onMeeting = true;
+                return true;
             }   
             catch (Exception ex)
             {            
