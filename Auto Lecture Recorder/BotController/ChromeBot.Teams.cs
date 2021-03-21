@@ -30,7 +30,6 @@ namespace Auto_Lecture_Recorder.BotController
             {
                 StartDriver();
                 LoadCookies(null, cookieFileName);
-                Thread.Sleep(3000);
             }
             else
             {
@@ -45,7 +44,6 @@ namespace Auto_Lecture_Recorder.BotController
         {            
             try
             {
-                HideBrowser = true;
                 StartDriver();
 
                 //-----------------------------------Microsoft's Login Page-----------------------------------
@@ -143,10 +141,8 @@ namespace Auto_Lecture_Recorder.BotController
 
                 StartDriver();
                 LoadCookies(null, cookieFileName);
-                Thread.Sleep(3000);
                 onMeeting = false;
 
-                Thread.Sleep(5000);
                 //Clicking to specific team
                 IWebElement lessonCardBtn = driver.FindElement(By.XPath("//div[contains(@data-tid, '" + name + "')]"));
                 lessonCardBtn.Click();
@@ -237,7 +233,6 @@ namespace Auto_Lecture_Recorder.BotController
                     HideBrowser = true;
                     StartDriver();
                     LoadCookies(null, cookieFileName);
-                    Thread.Sleep(3000);
                 }
                 else
                 {

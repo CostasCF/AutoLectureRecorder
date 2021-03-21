@@ -37,6 +37,7 @@ namespace Auto_Lecture_Recorder.BotController
         {
             if (driver != null)
             {
+                driver.Close();
                 driver.Quit();
                 isDriverRunning = false;
             }             
@@ -127,7 +128,6 @@ namespace Auto_Lecture_Recorder.BotController
                 else driver.Url = url;
 
                 //Load cookies
-                Cookie cookie;
                 foreach (string[] tmpCkInfo in new_cookiesList)
                 {
                     driver.Manage().Cookies.AddCookie(new Cookie(tmpCkInfo[0], tmpCkInfo[1]));
