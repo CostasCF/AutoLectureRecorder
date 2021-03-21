@@ -56,9 +56,15 @@ namespace Auto_Lecture_Recorder.BotController
             chromeOptions.AddAdditionalCapability("browser_version", "70.0", true);
             chromeOptions.AddAdditionalCapability("os", "Windows", true);
             chromeOptions.AddAdditionalCapability("os_version", "10", true);
+            chromeOptions.AddAdditionalCapability("useAutomationExtension", false);
             //Arguments
             chromeOptions.AddArgument("--disable-extensions");
             chromeOptions.AddArgument("--disable-default-apps");
+            chromeOptions.AddArguments("--window-size=1920,1080");
+            chromeOptions.AddArguments("--disable-gpu");
+            chromeOptions.AddArguments("--disable-extensions");
+            chromeOptions.AddArguments("--proxy-server='direct://'");
+            chromeOptions.AddArguments("--proxy-bypass-list=*");
             if (HideBrowser == true) chromeOptions.AddArgument("--headless");
             //Services
             if (HideCommandLine == true) driverService.HideCommandPromptWindow = true;   
@@ -124,9 +130,7 @@ namespace Auto_Lecture_Recorder.BotController
                 Cookie cookie;
                 foreach (string[] tmpCkInfo in new_cookiesList)
                 {
-                    cookie = new Cookie(tmpCkInfo[0], tmpCkInfo[1]);
-                    driver.Manage().Cookies.AddCookie(cookie);
-                    Console.WriteLine(cookie.Name);
+                    driver.Manage().Cookies.AddCookie(new Cookie(tmpCkInfo[0], tmpCkInfo[1]));
                 }
 
                 RefreshCurrentPage();

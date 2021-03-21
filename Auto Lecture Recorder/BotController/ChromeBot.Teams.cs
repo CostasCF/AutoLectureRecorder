@@ -136,25 +136,14 @@ namespace Auto_Lecture_Recorder.BotController
         }
 
         public bool ConnectToMeetingByName(string name)
-        { 
-            if (driver == null || !isDriverRunning)
-            {
-                StartDriver();
-                LoadCookies(null, cookieFileName);
-                Thread.Sleep(3000);
-                onMeeting = false;
-            }
-            else
-            {
-                if (!driver.Url.Equals(teamsHomePagetUrl))
-                {
-                    if (onMeeting) LeaveMeeting();
-                    driver.Url = teamsHomePagetUrl;
+        {           
+            if (driver != null || isDriverRunning) TerminateDriver();
 
-                    RefreshCurrentPage();
-                    onMeeting = false;
-                }
-            }
+            StartDriver();
+            LoadCookies(null, cookieFileName);
+            Thread.Sleep(3000);
+            onMeeting = false;
+
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
 
             //Clicking to specific team
@@ -269,10 +258,12 @@ namespace Auto_Lecture_Recorder.BotController
                 int cardsNum = int.Parse(cardsContainer.GetAttribute("set-size"));
                 Console.WriteLine("Number of cards: " + cardsNum);
                 //Get text from cards
-                Thread.Sleep(3000);
-                var cardsList = driver.FindElements(By.XPath("//*[@class='team-name-text']"));
+                var cardsList = cardsContainer.FindElements(By.XPath("//h1[@data-tid='team-name-text']"));
                 foreach (var card in cardsList)
+                {
+                    Console.WriteLine(card.Text);
                     meetingsList.Add(card.Text);
+                }
 
                 TerminateDriver(); 
 
